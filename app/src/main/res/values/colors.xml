@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <!-- ————————————————————————————————————— 所有共用颜色常量   ——————————————————————————————————————————————————— -->
+    <color name="theme_color">#00C15C</color> <!-- actionbar 标题字体 -->
+
+
+    <!-- ————————————————————————————————————— button 颜色 ————————————————————————————————————————————————————————————————————————————— -->
+    <color name="base_button_bg_normal">@color/theme_color</color><!-- 标准button默认颜色-->
+    <color name="base_button_bg_pressed">#8000C15C</color> <!-- 标准button 点击颜色 -->
 </resources>

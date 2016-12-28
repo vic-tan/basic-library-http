@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tlf.basic.http.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/A"
+                style="@style/base_button_corners"
+                android:layout_marginBottom="10dp"
+                android:onClick="A"
+                android:text="ResultCallback 结果请求" />
+
+            <Button
+                android:id="@+id/B"
+                style="@style/base_button_corners"
+                android:layout_marginBottom="10dp"
+                android:onClick="B"
+                android:text="DialogCallback 加载框请求"/>
+
+            <Button
+                android:id="@+id/C"
+                style="@style/base_button_corners"
+                android:layout_marginBottom="10dp"
+                android:onClick="C"
+                android:text="ProcessCallback 过程请求"/>
+
+            <Button
+                android:id="@+id/D"
+                style="@style/base_button_corners"
+                android:layout_marginBottom="10dp"
+                android:onClick="D"
+                android:text="MultipleCallback 多请求同一加载框"/>
+
+        </LinearLayout>
+
+        <!--   <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="300px"
+               android:orientation="vertical">
+
+               <com.tanlifei.support.view.layout.PromptView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+           </LinearLayout>-->
+
+    </ScrollView>
 </RelativeLayout>
+
+
