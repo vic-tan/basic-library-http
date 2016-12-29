@@ -1,10 +1,12 @@
 package com.tlf.basic.http.okhttp.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by tanlifei on 16/10/17.
  */
 
-public class OkHttpConsole {
+public class OkHttpConsole implements Serializable{
 
 
     private String appName;
