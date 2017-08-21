@@ -64,6 +64,7 @@ public class GetBuilder extends OkHttpRequestBuilder implements HasParamsable
     public GetBuilder params(Map<String, String> params)
     {
         this.params = params;
+        SupportLogger.i(OKHTTP_PARAMS,new Gson().toJson(params));
         SupportLogger.json(OKHTTP_PARAMS,new Gson().toJson(params));
         return this;
     }
@@ -76,6 +77,7 @@ public class GetBuilder extends OkHttpRequestBuilder implements HasParamsable
             params = new LinkedHashMap<>();
         }
         params.put(key, val);
+        SupportLogger.i(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         SupportLogger.json(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         return this;
     }
@@ -99,6 +101,7 @@ public class GetBuilder extends OkHttpRequestBuilder implements HasParamsable
             params = new LinkedHashMap<>();
         }
         params.put("json", "{'"+key+"':'"+val+"'}");
+        SupportLogger.i(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         SupportLogger.json(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         return this;
     }

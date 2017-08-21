@@ -66,13 +66,13 @@ public class LoggerInterceptor implements Interceptor {
 
                             try {
                                 if (null == OkHttpUtils.okHttpConsole) {
-                                    SupportLogger.d(tag, "" + clone.request().url().toString());
-                                    SupportLogger.d(tag, "" + resp + "");
+                                    SupportLogger.i(tag, "" + clone.request().url().toString());
+                                    SupportLogger.i(tag, "" + resp + "");
                                     SupportLogger.json(tag, "" + resp);
                                 }
                                 if (null != OkHttpUtils.okHttpConsole && !OkHttpUtils.okHttpConsole.isOn_of_level()) {
-                                    SupportLogger.d(tag, "" + clone.request().url().toString());
-                                    SupportLogger.d(tag, "" + resp + "");
+                                    SupportLogger.i(tag, "" + clone.request().url().toString());
+                                    SupportLogger.i(tag, "" + resp + "");
                                     SupportLogger.json(tag, "" + resp);
                                 }
                             } catch (Exception e) {

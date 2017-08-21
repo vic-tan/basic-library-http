@@ -79,6 +79,7 @@ public class PostFormBuilder extends OkHttpRequestBuilder implements HasParamsab
     public PostFormBuilder params(Map<String, String> params)
     {
         this.params = params;
+        SupportLogger.i(OKHTTP_PARAMS,new Gson().toJson(params)+"");
         SupportLogger.json(OKHTTP_PARAMS,new Gson().toJson(params));
         return this;
     }
@@ -91,7 +92,9 @@ public class PostFormBuilder extends OkHttpRequestBuilder implements HasParamsab
             this.params = new LinkedHashMap<>();
         }
         this.params.put("json", new Gson().toJson(mapParams));
+        SupportLogger.i(OKHTTP_PARAMS,new Gson().toJson(params)+"");
         SupportLogger.json(OKHTTP_PARAMS,new Gson().toJson(mapParams));
+
         return this;
     }
 
@@ -103,6 +106,7 @@ public class PostFormBuilder extends OkHttpRequestBuilder implements HasParamsab
             params = new LinkedHashMap<>();
         }
         params.put(key, val);
+        SupportLogger.i(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         SupportLogger.json(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         return this;
     }
@@ -117,6 +121,7 @@ public class PostFormBuilder extends OkHttpRequestBuilder implements HasParamsab
             params = new LinkedHashMap<>();
         }
         params.put("json", "{'"+key+"':'"+val+"'}");
+        SupportLogger.i(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         SupportLogger.json(OKHTTP_PARAMS,"{'"+key+"':'"+val+"'}");
         return this;
     }
